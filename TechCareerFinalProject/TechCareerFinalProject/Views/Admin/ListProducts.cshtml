@@ -1,0 +1,34 @@
+﻿@model List<Product>
+
+@{
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ürün ID</th>
+            <th>Ürün Adı</th>
+            <th>Ürün Kategorisi</th>
+            <th>Ürün Resmi</th>
+            <th>Ürünü Düzenle</th>
+            <th>Ürünü Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.CategoryID</td>
+                <td><img style="width:50px" src="data:image/jpeg;base64,@item.Image" /></td>
+                <td><a asp-action="EditProduct" asp-route-id="@item.ID" class="btn btn-primary">Düzenle</a></td>
+                <td><a class="btn btn-danger" asp-action="DeleteProduct" asp-route-id="@item.ID">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Admin/AddProduct" class="btn btn-primary">Yeni Ürün Ekle</a>
+
+
+

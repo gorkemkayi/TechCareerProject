@@ -1,0 +1,13 @@
+﻿@model List
+
+@{
+}
+
+<form asp-controller="User" asp-action="AddList" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Liste Başlığı</label>
+        <input type="text" class="form-control" asp-for="Name">
+        
+    </div>    
+    <button type="submit" class="btn btn-primary">Oluştur</button>
+</form>

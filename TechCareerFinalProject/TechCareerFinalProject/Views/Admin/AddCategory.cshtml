@@ -1,0 +1,21 @@
+﻿@model Category
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Yeni Kategori Oluştur</h1>
+
+<form asp-action="AddCategory" method="post">   
+
+    <div>
+        <label asp-for="Name">Kategori Adı</label>
+        <input type="text" asp-for="Name" />
+    </div>
+
+    <div>
+        <input type="submit" value="Ekle" />
+    </div>
+</form>
+
